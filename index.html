@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Admittance Visuomotor Policy for Contact-Rich
+        Manipulation Tasks with Hand-Arm Teleoperation.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Admittance Visuomotor Policy for Contact-Rich Manipulation Tasks with Hand-Arm Teleoperation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -82,38 +83,38 @@
   </div>
 </nav>
 
-
+<!-- 题目， 作者， 链接 部分 -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Admittance Visuomotor Control Policy Learning for Contact-Rich Manipulation Through Force-Interactive Teleoperation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://keunhong.com">Bo Zhou</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://utkarshsinha.com">Ruixuan Jiao</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://jonbarron.info">Yi Li</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="http://sofienbouaziz.com">Xiaogang Yuan</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://www.danbgoldman.com">Fang Fang</a><sup>1</sup>,
             </span>
-            <span class="author-block">
+            <!-- <span class="author-block">
               <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            </span> -->
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Southeast University,</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
 
           <div class="column has-text-centered">
@@ -175,72 +176,45 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
 
-
+<!-- 正文部分 从视频网格到图片 -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+        <div class="item open_left_door_mute">
+          <video poster="" id="open_left_door_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/tele_drag.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+        <div class="item open_cabinet_drawer_mute">
+          <video poster="" id="open_cabinet_drawer_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/tele_openbox.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+        <div class="item open_right_door_mute">
+          <video poster="" id="open_right_door_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/tele_rotatbox.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+        <div class="item open_top_drawer_mute">
+          <video poster="" id="open_top_drawer_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/open_top_drawer_720.mov"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+        <div class="item open_washing_machine_mute">
+          <video poster="" id="open_washing_machine_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/open_washing_machine_720.mov"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
+        <div class="item rotate_tap_mute">
+          <video poster="" id="rotate_tap_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/rotate_tap_720.mov"
                     type="video/mp4">
           </video>
         </div>
@@ -248,8 +222,9 @@
     </div>
   </div>
 </section>
+  
 
-
+<!-- 摘要文字 -->
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -288,7 +263,30 @@
       </div>
     </div>
     <!--/ Abstract. -->
+    
+    <!-- 方法 -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Method -->
+         <div class="columns is-centered has-text-centered">
+          <div class="column is-six-fifths">
+            <h2 class="title is-3">Visual-Force Imitation</h2>
+            <img id="framework" width="100%" src="static/images/policy_all.png">
+            <h3 class="has-text-centered">
+              <div class="content has-text-justified">
+              <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
+                the rollout, the observation image is converted to a representation vector with the same visual encoder.
+                The action and target wrench are predicted by retrieving the action and wrench of the expert data with
+                top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+              </p>
+            </div>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- youtube视频 -->
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -303,14 +301,14 @@
   </div>
 </section>
 
-
+<!-- 两个视频 -->
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -322,11 +320,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -342,72 +340,8 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
 
 
     <!-- Concurrent Work. -->
@@ -456,35 +390,17 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
-      <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            The website template was adapted from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
           </p>
         </div>
       </div>
-    </div>
   </div>
 </footer>
+
 
 </body>
 </html>
