@@ -43,46 +43,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
 <!-- 题目， 作者， 链接 部分 -->
 <section class="hero">
   <div class="hero-body">
@@ -104,12 +64,6 @@
             <span class="author-block">
               <a href="https://www.danbgoldman.com">Fang Fang</a><sup>1</sup>,
             </span>
-            <!-- <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span> -->
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -120,7 +74,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -128,7 +82,8 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
+              <!-- arixv link -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -158,15 +113,16 @@
                   <span>Code</span>
                   </a>
               </span>
+
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
             </div>
 
           </div>
@@ -176,7 +132,6 @@
   </div>
 </section>
 
-
 <!-- 正文部分 从视频网格到图片 -->
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -184,37 +139,31 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item open_left_door_mute">
           <video poster="" id="open_left_door_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/tele_drag.mp4"
+            <source src="static/videos/Insertion.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item open_cabinet_drawer_mute">
           <video poster="" id="open_cabinet_drawer_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/tele_openbox.mp4"
+            <source src="static/videos/Wipe.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item open_right_door_mute">
           <video poster="" id="open_right_door_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/tele_rotatbox.mp4"
+            <source src="static/videos/Drag.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item open_top_drawer_mute">
           <video poster="" id="open_top_drawer_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_top_drawer_720.mov"
+            <source src="static/videos/Open.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item open_washing_machine_mute">
           <video poster="" id="open_washing_machine_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_washing_machine_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item rotate_tap_mute">
-          <video poster="" id="rotate_tap_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/rotate_tap_720.mov"
+            <source src="static/videos/Draw.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -223,6 +172,13 @@
   </div>
 </section>
   
+
+<!-- 大图
+<section class="section">
+  <div class="column is-six-fifths">
+    <img id="framework" width="100%" src="static/images/general_fig.png">
+  </div>
+</section> -->
 
 <!-- 摘要文字 -->
 <section class="section">
@@ -233,59 +189,37 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Operating smoothly in contact-rich environments is crucial for robots to effectively perform 
+            daily tasks. Leveraging contact force information can enhance the smoothness of interactive 
+            operations, force control should be addressed throughout the entire process of autonomous 
+            policy development, from data collection, training to deployment.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            we propose an admittance imitation learning visuomotor policy framework to reduce mean contact 
+            force and force fluctuations. Our framework utilizes RGB images, robot joint positions, end-effector 
+            poses, and contact force as inputs, employing a diffusion model to generate future end-effector 
+            trajectories and contact force.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            An admittance controller is employed
+            to track this trajectories, enabling effective force control
+            for various tasks. Furthermore, a low-cost hand-arm tele-
+            operation system with interactive feedback is designed for
+            data collection. A evaluation of our teleoperation system
+            and policy framework was conducted on five contact-rich
+            manipulation tasks, each representing an action primitive.
+            Results show that our framework achieves the highest suc-
+            cess rate and demonstrates smoother contact compared
+            to other methods. Particularly for door opening task, the
+            average contact force is reduced by 53.92%, while the stan-
+            dard deviation of contact force fluctuations is diminished
+            by 76.51%.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
     
-    <!-- 方法 -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Method -->
-         <div class="columns is-centered has-text-centered">
-          <div class="column is-six-fifths">
-            <h2 class="title is-3">Visual-Force Imitation</h2>
-            <img id="framework" width="100%" src="static/images/policy_all.png">
-            <h3 class="has-text-centered">
-              <div class="content has-text-justified">
-              <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
-                the rollout, the observation image is converted to a representation vector with the same visual encoder.
-                The action and target wrench are predicted by retrieving the action and wrench of the expert data with
-                top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
-              </p>
-            </div>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- youtube视频 -->
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
@@ -301,48 +235,251 @@
   </div>
 </section>
 
+
+  <!-- 整体方法 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method -->
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">AdmitDiff Policy Framework</h2>
+
+          <h3 class="has-text-centered">
+            <div class="content has-text-justified">
+            <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
+              the rollout, the observation image is converted to a representation vector with the same visual encoder.
+              The action and target wrench are predicted by retrieving the action and wrench of the expert data with
+              top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+            </p>
+          </div>
+          </h3>
+
+          <img id="framework" width="90%" src="static/images/policy_all.png">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 遥操作 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method -->
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">Teleoperation</h2>
+
+          <h3 class="has-text-centered">
+            <div class="content has-text-justified">
+            <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
+              the rollout, the observation image is converted to a representation vector with the same visual encoder.
+              The action and target wrench are predicted by retrieving the action and wrench of the expert data with
+              top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+            </p>
+          </div>
+          </h3>     
+
+          <img id="framework" width="60%" src="static/images/teleop.png">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- open_left_door -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Behavior Cloning -->
+      <div class="column">
+        <div class="content">
+          <p>Open Box</p>
+          <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tele_openbox.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA -->
+      <div class="column">
+        <div class="content">
+          <p>Rotate Box</p>
+          <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tele_rotatbox.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA-Force -->
+      <div class="column">
+        <div class="content">
+          <p>Drag</p>
+          <video id="open_left_door_moma_force" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/tele_drag.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+<!-- 结果 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method -->
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Results</h2>
+        <img id="framework" width="100%" src="static/images/policy_all.png">
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
+            the rollout, the observation image is converted to a representation vector with the same visual encoder.
+            The action and target wrench are predicted by retrieving the action and wrench of the expert data with
+            top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+          </p>
+        </div>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 九宫格视频 -->
+<section class="section">
+
+  <!-- open_right_door -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Behavior Cloning -->
+      <div class="column">
+        <div class="content">
+          <p>Behavior Cloning (BC)</p>
+          <video id="BC" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/open_right_door_bc_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA -->
+      <div class="column">
+        <div class="content">
+          <p>MOMA-Force w/o FC</p>
+          <video id="MOMA" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/open_right_door_moma_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA-Force -->
+      <div class="column">
+        <div class="content">
+          <p>MOMA-Force</p>
+          <video id="MOMA-Force" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/open_right_door_moma_force_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- open_right_door end -->
+
+  <!-- open_left_door -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Behavior Cloning -->
+      <div class="column">
+        <div class="content">
+          <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/open_left_door_bc_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA -->
+      <div class="column">
+        <div class="content">
+          <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/open_left_door_moma_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA-Force -->
+      <div class="column">
+        <div class="content">
+          <video id="open_left_door_moma_force" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/open_left_door_moma_force_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- open_left_door end -->
+
+  <!-- rotate_tap -->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Behavior Cloning -->
+      <div class="column">
+        <div class="content">
+          <video id="rotate_tap_bc" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/rotate_tap_bc_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA -->
+      <div class="column">
+        <div class="content">
+          <video id="rotate_tap_moma" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/rotate_tap_moma_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- MOMA-Force -->
+      <div class="column">
+        <div class="content">
+          <video id="rotate_tap_moma_force" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/comp/rotate_tap_moma_force_720.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- open_left_door end -->
+</section>
+
 <!-- 两个视频 -->
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Matting. -->
-
 
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
