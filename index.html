@@ -49,25 +49,28 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Admittance Visuomotor Control Policy Learning for Contact-Rich Manipulation Through Force-Interactive Teleoperation</h1>
+          <h1 class="title is-1 publication-title">Admittance Visuomotor Policy Learning for General-Purpose Contact-Rich Manipulations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Bo Zhou</a><sup>1</sup>,</span>
+              <a href="https://ieeexplore.ieee.org/author/37957753600">Bo Zhou</a>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Ruixuan Jiao</a><sup>1</sup>,</span>
+              <a href="https://utkarshsinha.com">Ruixuan Jiao</a>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Yi Li</a><sup>1</sup>,
+              <a href="https://yolo01826.github.io/">Yi Li</a>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Xiaogang Yuan</a><sup>1</sup>,
+              <a href="https://ieeexplore.ieee.org/author/37088578595">Xiaogang Yuan</a>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Fang Fang</a><sup>1</sup>,
+              <a href="https://ieeexplore.ieee.org/author/37529151500">Fang Fang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://ieeexplore.ieee.org/author/37310205600">Shihua Li</a>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Southeast University,</span>
+            <span class="author-block">Southeast University</span>
             <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
 
@@ -85,7 +88,7 @@
               </span> -->
               <!-- arixv link -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2409.14440"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -95,7 +98,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=LDSjkn_cWbQ&feature=youtu.be"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -105,7 +108,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/RyanJiao/AdmitDiffPolicy"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -221,17 +224,17 @@
     <!--/ Abstract. -->
     
     <!-- youtube视频 -->
-    <!-- Paper video. -->
+
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/watch?v=LDSjkn_cWbQ&feature=youtu.be"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+
   </div>
 </section>
 
@@ -267,7 +270,7 @@
       <!-- Method -->
         <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3">Teleoperation</h2>
+          <h2 class="title is-3">Robot Teleoperation System</h2>
 
           <h3 class="has-text-centered">
             <div class="content has-text-justified">
@@ -335,7 +338,8 @@
       <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Results</h2>
-        <img id="framework" width="100%" src="static/images/policy_all.png">
+        <img id="framework" width="50%" src="static/images/boxplot.png">
+        <p>Rotate Box</p>
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
@@ -352,13 +356,10 @@
 
 
 <!-- 九宫格视频 -->
-<section class="section">
-
-  <!-- open_right_door -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
 
-      <!-- Behavior Cloning -->
       <div class="column">
         <div class="content">
           <p>Behavior Cloning (BC)</p>
@@ -369,7 +370,6 @@
         </div>
       </div>
 
-      <!-- MOMA -->
       <div class="column">
         <div class="content">
           <p>MOMA-Force w/o FC</p>
@@ -380,7 +380,6 @@
         </div>
       </div>
 
-      <!-- MOMA-Force -->
       <div class="column">
         <div class="content">
           <p>MOMA-Force</p>
@@ -390,17 +389,11 @@
           </video>
         </div>
       </div>
-
-
     </div>
   </div>
-  <!-- open_right_door end -->
 
-  <!-- open_left_door -->
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-
-      <!-- Behavior Cloning -->
       <div class="column">
         <div class="content">
           <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">
@@ -409,8 +402,6 @@
           </video>
         </div>
       </div>
-
-      <!-- MOMA -->
       <div class="column">
         <div class="content">
           <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">
@@ -419,8 +410,6 @@
           </video>
         </div>
       </div>
-
-      <!-- MOMA-Force -->
       <div class="column">
         <div class="content">
           <video id="open_left_door_moma_force" autoplay controls muted loop playsinline height="100%">
@@ -429,17 +418,12 @@
           </video>
         </div>
       </div>
-
-
     </div>
   </div>
-  <!-- open_left_door end -->
 
-  <!-- rotate_tap -->
+
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-
-      <!-- Behavior Cloning -->
       <div class="column">
         <div class="content">
           <video id="rotate_tap_bc" autoplay controls muted loop playsinline height="100%">
@@ -448,8 +432,6 @@
           </video>
         </div>
       </div>
-
-      <!-- MOMA -->
       <div class="column">
         <div class="content">
           <video id="rotate_tap_moma" autoplay controls muted loop playsinline height="100%">
@@ -458,8 +440,6 @@
           </video>
         </div>
       </div>
-
-      <!-- MOMA-Force -->
       <div class="column">
         <div class="content">
           <video id="rotate_tap_moma_force" autoplay controls muted loop playsinline height="100%">
@@ -468,20 +448,15 @@
           </video>
         </div>
       </div>
-
-
     </div>
   </div>
-  <!-- open_left_door end -->
-</section>
+</section> -->
 
-<!-- 两个视频 -->
-<section class="section">
+<!-- 相关链接 -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
-
-    <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
@@ -506,20 +481,17 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
-</section>
-
-
+</section> -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{bo@2024admitdiff,
+  author    = {Bo Zhou, Ruixuan Jiao, Yi Li, Xiaogang Yuan, Fang Fang, Shihua Li,},
+  title     = {Admittance Visuomotor Policy Learning for General-Purpose Contact-Rich Manipulations},
+  journal   = {arXiv preprint arXiv:2409.14440},
+  year      = {2024},
 }</code></pre>
   </div>
 </section>
