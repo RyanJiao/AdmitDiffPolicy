@@ -206,17 +206,14 @@
           <p>
             An admittance controller is employed
             to track this trajectories, enabling effective force control
-            for various tasks. Furthermore, a low-cost hand-arm tele-
-            operation system with interactive feedback is designed for
+            for various tasks. Furthermore, a low-cost hand-arm teleoperation system with interactive feedback is designed for
             data collection. A evaluation of our teleoperation system
             and policy framework was conducted on five contact-rich
             manipulation tasks, each representing an action primitive.
-            Results show that our framework achieves the highest suc-
-            cess rate and demonstrates smoother contact compared
+            Results show that our framework achieves the highest success rate and demonstrates smoother contact compared
             to other methods. Particularly for door opening task, the
-            average contact force is reduced by 53.92%, while the stan-
-            dard deviation of contact force fluctuations is diminished
-            by 76.51%.
+            average contact force is reduced by <strong>53.92%</strong>, while the standard deviation of contact force fluctuations is diminished
+            by <strong>76.51%</strong>.
           </p>
         </div>
       </div>
@@ -229,8 +226,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/watch?v=LDSjkn_cWbQ&feature=youtu.be"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <!-- <iframe src="https://www.youtube.com/watch?v=LDSjkn_cWbQ&feature=youtu.be"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+
+          <iframe src="https://www.youtube.com/embed/LDSjkn_cWbQ?si=ECH2ieCTTU1OagOj" 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+               <!-- frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
@@ -249,15 +250,16 @@
 
           <h3 class="has-text-centered">
             <div class="content has-text-justified">
-            <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
-              the rollout, the observation image is converted to a representation vector with the same visual encoder.
-              The action and target wrench are predicted by retrieving the action and wrench of the expert data with
-              top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+            <p>AdmitDiff Policy Framework. Left: During inference, the previous two steps’ observations are encoded as inputs for noise estimation, while
+              the student model outputs actions for the next 8 time steps, the number K represents the denoising iteration required by the diffuser. The arm’s
+              force-position trajectory is used in the admittance controller to compute the desired pose. Middle: The teacher model is trained for 100 denoising
+              steps, then its parameters are frozen to train the student model with a consistency loss for single-step denoising. Right: Data collection, including
+              contact force information, is performed using the teleoperation system designed in this work.              
             </p>
           </div>
           </h3>
 
-          <img id="framework" width="90%" src="static/images/policy_all.png">
+          <img id="framework" width="110%" src="static/images/policy_all.png">
 
         </div>
       </div>
@@ -274,17 +276,33 @@
 
           <h3 class="has-text-centered">
             <div class="content has-text-justified">
-            <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
-              the rollout, the observation image is converted to a representation vector with the same visual encoder.
-              The action and target wrench are predicted by retrieving the action and wrench of the expert data with
-              top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
-            </p>
-          </div>
-          </h3>     
+              <p>There are three main components that provide critical data for the teleoperation task.</p>
+              <ol>
+                <li>
+                  <strong>Wrist spatial pose control module:</strong> It estimates the 6-DoF position and orientation of the wearer’s wrist using the Intel RealSense Tracking Camera T265. 
+                  The Intel RealSense T265 integrates Stereo cameras and an IMU to run Visual-Inertial Odometry to provide accurate spatial odometry. 
+                  Following the approach in [9], we designed a simple glove using Velcro and 3D-printed parts to securely mount the T265 on the operator’s palm.
+                </li>
+                <li>
+                  <strong>Gesture detection and remapping module:</strong> It uses the Ultraleap Leap Motion Controller to estimate the keypoints coordinates of human hand gestures.
+                  Then it generates the joint angles of a multi-fingered robotic hand based on detected human hand gestures, allowing precise gesture-based interaction with the robot.
+                </li>
+                <li>
+                  <strong>Wrist-mounted force feedback module:</strong> It uses Eccentric Rotating Mass (ERM) vibration motors attached to the operator’s palm.
+                  Our system uses an stm32f103c8t6 microcontroller to generate Pulse Width Modulation (PWM) signals for a NPN Bipolar Junction Transistor, 
+                  based on force data from the wrist Force/Torque sensor. Contact forces between 0-20N are mapped linearly to vibration intensity, 
+                  providing real-time feedback to the operator, similar to the approach in [27].
+                </li>
+              </ol>
+            </div>
 
-          <img id="framework" width="60%" src="static/images/teleop.png">
-          
+            <img id="framework" width="60%" src="static/images/teleop.png">
+          </div>
+          </h3>    
         </div>
+
+
+
       </div>
     </div>
   </section>
@@ -292,7 +310,7 @@
   <!-- open_left_door -->
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-
+        
       <!-- Behavior Cloning -->
       <div class="column">
         <div class="content">
@@ -339,13 +357,11 @@
       <div class="column is-six-fifths">
         <h2 class="title is-3">Results</h2>
         <img id="framework" width="50%" src="static/images/boxplot.png">
-        <p>Rotate Box</p>
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
-          <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
-            the rollout, the observation image is converted to a representation vector with the same visual encoder.
-            The action and target wrench are predicted by retrieving the action and wrench of the expert data with
-            top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+          <p>AdmitDiff Policy consistently demonstrates the most stable contact force control, with lower variance and more controlled median force, especially in tasks like Insertion and Wiping that require precision. In contrast, Diffusion Policy and Consistency Policy exhibit higher variance, particularly in force-intensive tasks like DoorOpening, indicating less stable control. 
+
+            The AdmitDiff Policy shows an average reduction of approximately <strong>48.8%</strong> in mean contact force and <strong>52.0%</strong> in standard deviation compared to the other methods in the five tasks.
           </p>
         </div>
         </h3>
