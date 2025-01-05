@@ -312,7 +312,6 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
         
-      <!-- Behavior Cloning -->
       <div class="column">
         <div class="content">
           <p>Open Box</p>
@@ -323,7 +322,6 @@
         </div>
       </div>
 
-      <!-- MOMA -->
       <div class="column">
         <div class="content">
           <p>Rotate Box</p>
@@ -334,7 +332,6 @@
         </div>
       </div>
 
-      <!-- MOMA-Force -->
       <div class="column">
         <div class="content">
           <p>Drag</p>
@@ -370,6 +367,91 @@
     </div>
   </div>
 </section>
+
+
+<!-- 失败案例 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method -->
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Failure Cases</h2>
+        <!-- <img id="framework" width="50%" src="static/images/boxplot.png"> -->
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+            <p>
+              We also uploaded some failure cases of AdmitDiff Policy. Among them, for tasks involving repetitive behaviors, 
+              the policy occasionally fails to determine the task completion condition, resulting in repeated execution of the 
+              same set of actions even after the task has been completed.
+            </p>
+            <p>
+              This might be due to insufficient extraction of visual features, leading to reduced generalization. 
+              For tasks with high precision requirements, failures may occur due to occasional grasp misalignments, 
+              which subsequently lead to downstream action failures. This could be attributed to a lack of demonstration 
+              trajectories that include operations under specific grasping poses necessary for task completion.
+            </p>
+            <p>
+              We plan to further improve the robustness and generalization of the model in complex tasks by enhancing the 
+              visual feature extraction module and expanding the diversity of demonstration data.
+            </p>
+        </div>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container is-max-desktop">
+  <div class="columns is-centered">
+      
+    <div class="column">
+      <div class="content">
+        <p><strong>Insert Failure:</strong> Policy failed to identify misalignments.</p>
+        <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/failed_insert_misalian.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <p><strong>Insert Failure:</strong> Grasp failure lead to wrong insert pose.</p>
+        <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/failed_insert_grasp.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container is-max-desktop">
+  <div class="columns is-centered">
+      
+    <div class="column">
+      <div class="content">
+        <p><strong>Wipe Failure:</strong> Policy failed to identify insufficient wipe.</p>
+        <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/failed_wipe_nclean.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <p><strong>Wipe Failure:</strong> Policy failed to recognize task completion.</p>
+        <video id="Wipe Failure: policy wouldn't stop" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/failed_wipe_nstop.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 <!-- 九宫格视频 -->
